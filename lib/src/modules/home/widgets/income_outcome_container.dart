@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:monetine/src/pages/home/widgets/incone_outcome_data_widget.dart';
+import 'package:monetine/src/modules/home/widgets/incone_outcome_data_widget.dart';
 
 class IncomeOutcomeContainer extends StatelessWidget {
   const IncomeOutcomeContainer({Key? key}) : super(key: key);

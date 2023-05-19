@@ -1,3 +1,4 @@
+import 'package:monetine/src/routes/bankAccounts/bank_account_route.dart';
 import 'package:monetine/src/routes/creditCard/credit_card_route.dart';
 import 'package:monetine/src/routes/home/home_route.dart';
 import 'package:monetine/src/routes/monetineNavBar/monetine_navbar_route.dart';
@@ -8,6 +9,7 @@ class AppPages {
     ...HomeRoute.routes,
     ...CreditCardRoute.route,
     ...MonetineNavBarRoute.routes,
-    ...ProfileRoute.routes
+    ...ProfileRoute.routes,
+    ...BankAccountRoute.route,
   ];
 }

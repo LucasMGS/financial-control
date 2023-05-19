@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
-import 'package:monetine/src/pages/creditCard/credit_card_controller.dart';
+import 'package:monetine/src/modules/creditCard/credit_card_controller.dart';
 
-class CreditCardPage extends GetView<CreditCardController> {
-  const CreditCardPage({Key? key}) : super(key: key);
+class CreateCreditCardPage extends GetView<CreditCardController> {
+  const CreateCreditCardPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +36,8 @@ class CreditCardPage extends GetView<CreditCardController> {
                   ),
                   const SizedBox(height: 10),
                   ElevatedButton(
-                      onPressed: () {}, child: Text('Selecione um ícone')),
+                      onPressed: () {},
+                      child: const Text('Selecione um ícone')),
                   const SizedBox(height: 10),
                   Row(
                     children: [

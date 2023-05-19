@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:monetine/src/core/shared/extensions/context_extension.dart';
-
-import 'package:monetine/src/pages/profile/profile_controller.dart';
+import 'package:monetine/src/modules/profile/profile_controller.dart';
 
 class ProfilePage extends GetView<ProfileController> {
   const ProfilePage({Key? key}) : super(key: key);

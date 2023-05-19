@@ -3,10 +3,10 @@ import 'package:flutter_expandable_fab/flutter_expandable_fab.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:get/route_manager.dart';
 import 'package:monetine/src/core/constants/routes.dart';
-import 'package:monetine/src/pages/home/controllers/home_controller.dart';
-import 'package:monetine/src/pages/home/widgets/income_outcome_container.dart';
-import 'package:monetine/src/pages/home/widgets/transaction_history.dart';
-import 'package:monetine/src/pages/home/widgets/bar_chart.dart';
+import 'package:monetine/src/modules/home/controllers/home_controller.dart';
+import 'package:monetine/src/modules/home/widgets/bar_chart.dart';
+import 'package:monetine/src/modules/home/widgets/income_outcome_container.dart';
+import 'package:monetine/src/modules/home/widgets/transaction_history.dart';
 
 class HomePage extends GetView<HomeController> {
   const HomePage({Key? key}) : super(key: key);

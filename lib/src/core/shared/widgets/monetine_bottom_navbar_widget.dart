@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
-import 'package:monetine/src/pages/home/controllers/monetine_bottom_navbar_controller.dart';
+import 'package:monetine/src/modules/home/controllers/monetine_bottom_navbar_controller.dart';
 
 class MonetineBottomNavBar extends GetView<MonetineBottomNavBarController> {
   const MonetineBottomNavBar({Key? key}) : super(key: key);
@@ -25,6 +25,10 @@ class MonetineBottomNavBar extends GetView<MonetineBottomNavBarController> {
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
             label: 'Perfil',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Criar conta',
           ),
         ],
       );

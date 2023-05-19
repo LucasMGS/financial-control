@@ -1,6 +1,6 @@
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:monetine/src/core/constants/routes.dart';
-import 'package:monetine/src/pages/home/views/monetine_bottom_navbar_page.dart';
+import 'package:monetine/src/modules/home/views/monetine_bottom_navbar_page.dart';
 
 class MonetineNavBarRoute {
   MonetineNavBarRoute._();

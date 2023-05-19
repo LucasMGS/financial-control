@@ -1,7 +1,7 @@
 import 'package:get/instance_manager.dart';
-import 'package:monetine/src/pages/home/controllers/home_controller.dart';
-import 'package:monetine/src/pages/home/controllers/monetine_bottom_navbar_controller.dart';
-import 'package:monetine/src/pages/profile/profile_controller.dart';
+import 'package:monetine/src/modules/home/controllers/home_controller.dart';
+import 'package:monetine/src/modules/home/controllers/monetine_bottom_navbar_controller.dart';
+import 'package:monetine/src/modules/profile/profile_controller.dart';
 
 class InitialBindings implements Bindings {
   @override
