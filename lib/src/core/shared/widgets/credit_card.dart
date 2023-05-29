@@ -4,16 +4,12 @@ import 'package:monetine/src/core/shared/widgets/back_card.dart';
 import 'package:monetine/src/core/shared/widgets/front_card.dart';
 
 class CreditCard extends StatefulWidget {
-  final String senhaCartao;
   final String titularCartao;
   final String numCartao;
-  final bool mostrarNumeroCartao;
   const CreditCard({
     Key? key,
-    required this.senhaCartao,
     required this.titularCartao,
     required this.numCartao,
-    this.mostrarNumeroCartao = false,
   }) : super(key: key);
 
   @override
@@ -37,10 +33,10 @@ class _CreditCardState extends State<CreditCard> {
       child: TweenAnimationBuilder<double>(
         tween: Tween<double>(begin: 0, end: angle),
         duration: const Duration(milliseconds: 300),
-        child: BackCard(
-            senhaCartao: widget.senhaCartao,
-            closeDate: '16/09',
-            expirationDate: '17/09'),
+        child: const BackCard(
+          closeDate: '16/09',
+          expirationDate: '17/09',
+        ),
         builder: (context, value, child) {
           if (value >= (pi / 2)) {
             _isFlipped = true;
@@ -56,7 +52,6 @@ class _CreditCardState extends State<CreditCard> {
                 ? FrontCard(
                     titular: widget.titularCartao,
                     numero: widget.numCartao,
-                    mostrarNumeroCartao: widget.mostrarNumeroCartao,
                   )
                 : Transform(
                     alignment: Alignment.center,

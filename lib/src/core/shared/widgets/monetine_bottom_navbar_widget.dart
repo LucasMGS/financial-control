@@ -23,12 +23,12 @@ class MonetineBottomNavBar extends GetView<MonetineBottomNavBarController> {
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Perfil',
+            icon: Icon(Icons.auto_graph_outlined),
+            label: 'Estatísticas',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
-            label: 'Criar conta',
+            label: 'Perfil',
           ),
         ],
       );

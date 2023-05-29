@@ -8,7 +8,7 @@ class TransactionHistory extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
       shrinkWrap: true,
-      itemCount: 10,
+      itemCount: 5,
       itemBuilder: (context, index) => const TransactionWidget(),
     );
   }

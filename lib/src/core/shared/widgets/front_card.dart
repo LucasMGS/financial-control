@@ -5,28 +5,24 @@ import 'package:monetine/src/core/utils/four_last_card_numbers.dart';
 class FrontCard extends StatelessWidget {
   final String numero;
   final String titular;
-  final bool mostrarNumeroCartao;
   const FrontCard({
     Key? key,
     required this.numero,
     required this.titular,
-    required this.mostrarNumeroCartao,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.all(25),
-      height: 200,
-      width: double.infinity,
+      margin: const EdgeInsets.all(15),
       decoration: BoxDecoration(
-          gradient: const LinearGradient(
-              colors: [Colors.purple, Colors.deepPurple],
-              begin: Alignment.centerLeft,
-              end: Alignment.centerRight,
-              stops: [0.2, 1]),
-          borderRadius: BorderRadius.circular(10),
-          border: Border.all(width: 0.7, color: Colors.grey)),
+        gradient: const LinearGradient(
+            colors: [Colors.purple, Colors.deepPurple],
+            begin: Alignment.centerLeft,
+            end: Alignment.centerRight,
+            stops: [0.2, 1]),
+        borderRadius: BorderRadius.circular(10),
+      ),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
         child: Column(
@@ -38,7 +34,7 @@ class FrontCard extends StatelessWidget {
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text('Lucas Moreira', style: context.textTheme.titleMedium),
+                  Text(titular, style: context.textTheme.titleMedium),
                 ],
               ),
             ),
