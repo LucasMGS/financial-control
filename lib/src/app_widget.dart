@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:get/instance_manager.dart';
 import 'package:monetine/src/core/constants/routes.dart';
 import 'package:monetine/src/core/shared/themes/dark_theme.dart';
 import 'package:monetine/src/core/shared/themes/light_theme.dart';

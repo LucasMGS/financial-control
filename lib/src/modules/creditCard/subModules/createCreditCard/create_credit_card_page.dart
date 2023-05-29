@@ -64,7 +64,9 @@ class CreateCreditCardPage extends GetView<CreditCardController> {
                   ),
                   const SizedBox(height: 10),
                   ElevatedButton(
-                      onPressed: () {}, child: Text('Selecionar conta')),
+                    child: const Text('Selecionar conta'),
+                    onPressed: () {},
+                  ),
                 ],
               ),
             )
