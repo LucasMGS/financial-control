@@ -8,6 +8,7 @@ class Routes {
   static const String monetineNavBar = '/bottomNavBarPage';
   static const String bankAccounts = '/bankAccounts';
   static const String login = '/loginPage';
+  static const String signUp = '/signUpPage';
 
   //subPages
   static const String create = '/create';

@@ -6,6 +6,7 @@ import 'package:monetine/src/routes/home_route.dart';
 import 'package:monetine/src/routes/login_route.dart';
 import 'package:monetine/src/routes/monetine_navbar_route.dart';
 import 'package:monetine/src/routes/profile_route.dart';
+import 'package:monetine/src/routes/sign_up_route.dart';
 
 class AppPages {
   static final routes = [
@@ -17,5 +18,6 @@ class AppPages {
     ...GoalsRoute.routes,
     ...CreateTransactionRoute.route,
     ...LoginRoute.routes,
+    ...SignUpRoute.routes,
   ];
 }

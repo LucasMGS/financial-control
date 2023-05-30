@@ -12,7 +12,7 @@ class LoginPage extends StatelessWidget {
       body: Stack(
         children: [
           Container(
-            color: Colors.orange,
+            color: context.theme.colorScheme.primary,
           ),
           Positioned(
             bottom: 170,
@@ -26,7 +26,9 @@ class LoginPage extends StatelessWidget {
                   style: context.textTheme.titleMedium!
                       .copyWith(color: context.theme.colorScheme.primary),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Get.toNamed(Routes.signUp);
+                },
               ),
             ),
           ),
