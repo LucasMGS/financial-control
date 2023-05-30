@@ -10,4 +10,5 @@ class Routes {
 
   static const createBankAccount = '$bankAccounts$create';
   static const createCreditCard = '$creditCard$create';
+  static const createGoal = '$goals$create';
 }

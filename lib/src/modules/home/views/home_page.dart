@@ -1,10 +1,11 @@
-import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_expandable_fab/flutter_expandable_fab.dart';
 import 'package:get/get.dart';
 import 'package:monetine/src/core/constants/routes.dart';
+import 'package:monetine/src/core/enums/transaction_type.dart';
 import 'package:monetine/src/modules/home/controllers/home_controller.dart';
 import 'package:monetine/src/modules/home/widgets/bar_chart_widget.dart';
+import 'package:monetine/src/modules/home/widgets/card_button_widget.dart';
 import 'package:monetine/src/modules/home/widgets/transaction_history.dart';
 
 class HomePage extends GetView<HomeController> {
@@ -28,71 +29,22 @@ class HomePage extends GetView<HomeController> {
                   shrinkWrap: true,
                   scrollDirection: Axis.horizontal,
                   children: [
-                    InkWell(
-                      onTap: () => Get.toNamed(Routes.createTransaction),
-                      child: Container(
-                        width: 120,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: context.theme.colorScheme.primaryContainer,
-                        ),
-                        margin: const EdgeInsets.only(left: 10),
-                        child: const Padding(
-                          padding: EdgeInsets.all(10),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Icon(Icons.upload),
-                              Text('Enviar \$\$\$'),
-                            ],
-                          ),
-                        ),
-                      ),
+                    CardButtonWidget(
+                      text: 'Enviar \$\$\$',
+                      icon: Icons.upload,
+                      onTap: () => Get.toNamed(Routes.createTransaction,
+                          arguments: TransactionType.enviar),
                     ),
-                    Container(
-                      width: 120,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: context.theme.colorScheme.primaryContainer,
-                      ),
-                      margin: const EdgeInsets.only(left: 10),
-                      child: const Padding(
-                        padding: EdgeInsets.all(10),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Icon(Icons.download),
-                            Text('Receber \$\$\$'),
-                          ],
-                        ),
-                      ),
+                    CardButtonWidget(
+                      text: 'Receber \$\$\$',
+                      icon: Icons.download,
+                      onTap: () => Get.toNamed(Routes.createTransaction,
+                          arguments: TransactionType.receber),
                     ),
-                    InkWell(
+                    CardButtonWidget(
+                      text: 'Criar objetivo',
+                      icon: Icons.check_box,
                       onTap: () => Get.toNamed(Routes.goals),
-                      child: Container(
-                        width: 120,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: context.theme.colorScheme.primaryContainer,
-                        ),
-                        margin: const EdgeInsets.only(left: 10),
-                        child: const Padding(
-                          padding: EdgeInsets.all(10),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Icon(Icons.check_box),
-                              Text(
-                                'Criar objetivo',
-                                textAlign: TextAlign.center,
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
                     ),
                   ],
                 ),

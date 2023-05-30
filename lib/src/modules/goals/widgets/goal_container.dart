@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_utils/get_utils.dart';
+import 'package:percent_indicator/linear_percent_indicator.dart';
 
 class GoalContainer extends StatelessWidget {
   const GoalContainer({super.key});
@@ -50,7 +51,15 @@ class GoalContainer extends StatelessWidget {
                 const SizedBox(height: 5),
                 SizedBox(
                   width: context.width * 0.5,
-                  child: const LinearProgressIndicator(),
+                  child: LinearPercentIndicator(
+                    animation: true,
+                    lineHeight: 20.0,
+                    animationDuration: 1200,
+                    percent: 0.8,
+                    center: const Text("80.0%"),
+                    barRadius: const Radius.circular(10),
+                    progressColor: Colors.green,
+                  ),
                 ),
               ],
             ),

@@ -92,6 +92,7 @@ class _CreditCardSliderState extends State<CreditCardSlider> {
             ],
           ),
         ),
+        const Divider()
       ],
     );
   }

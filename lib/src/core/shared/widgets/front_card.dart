@@ -5,16 +5,20 @@ import 'package:monetine/src/core/utils/four_last_card_numbers.dart';
 class FrontCard extends StatelessWidget {
   final String numero;
   final String titular;
+  final double? cardHeight;
   const FrontCard({
     Key? key,
     required this.numero,
     required this.titular,
+    this.cardHeight,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.all(15),
+      margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+      height: cardHeight ?? 200,
+      width: double.infinity,
       decoration: BoxDecoration(
         gradient: const LinearGradient(
             colors: [Colors.purple, Colors.deepPurple],

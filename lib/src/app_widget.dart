@@ -4,7 +4,7 @@ import 'package:monetine/src/core/constants/routes.dart';
 import 'package:monetine/src/core/shared/themes/dark_theme.dart';
 import 'package:monetine/src/core/shared/themes/light_theme.dart';
 import 'package:monetine/src/routes/appPages/app_page.dart';
-import 'package:monetine/src/routes/home/home_route.dart';
+import 'package:monetine/src/routes/home_route.dart';
 import 'package:monetine/src/routes/initial_bindings.dart';
 
 class AppWidget extends StatelessWidget {
