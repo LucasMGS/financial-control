@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get_utils/get_utils.dart';
 import 'package:get/route_manager.dart';
+import 'package:local_auth/local_auth.dart';
 import 'package:monetine/src/core/constants/routes.dart';
 
 class LoginPage extends StatelessWidget {
@@ -45,7 +47,28 @@ class LoginPage extends StatelessWidget {
                     color: context.theme.colorScheme.primary,
                   ),
                 ),
-                onPressed: () {
+                onPressed: () async {
+                  final LocalAuthentication auth = LocalAuthentication();
+                  // final bool canAuthenticateWithBiometrics =
+                  //     await auth.canCheckBiometrics;
+                  // final bool canAuthenticate = canAuthenticateWithBiometrics ||
+                  //     await auth.isDeviceSupported();
+                  // if (canAuthenticate) {
+                  //   try {
+                  //     final bool didAuthenticate = await auth.authenticate(
+                  //       localizedReason: 'Autentique para mostrar sua conta!',
+                  //     );
+                  //     if (didAuthenticate) {
+                  //       Get.toNamed(Routes.monetineNavBar);
+                  //     } else {
+                  //       print('falha ao autenticar');
+                  //     }
+                  //     // ···
+                  //   } on PlatformException catch (e) {
+                  //     debugPrint(e.toString());
+                  //     // ...
+                  //   }
+                  // }
                   Get.toNamed(Routes.monetineNavBar);
                 },
               ),
