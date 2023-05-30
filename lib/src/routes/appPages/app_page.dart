@@ -3,6 +3,7 @@ import 'package:monetine/src/routes/create_transaction_route.dart';
 import 'package:monetine/src/routes/credit_card_route.dart';
 import 'package:monetine/src/routes/goals_routes.dart';
 import 'package:monetine/src/routes/home_route.dart';
+import 'package:monetine/src/routes/login_route.dart';
 import 'package:monetine/src/routes/monetine_navbar_route.dart';
 import 'package:monetine/src/routes/profile_route.dart';
 
@@ -14,6 +15,7 @@ class AppPages {
     ...ProfileRoute.routes,
     ...BankAccountRoute.route,
     ...GoalsRoute.routes,
-    ...CreateTransactionRoute.route
+    ...CreateTransactionRoute.route,
+    ...LoginRoute.routes,
   ];
 }

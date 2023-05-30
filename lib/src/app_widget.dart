@@ -21,7 +21,7 @@ class AppWidget extends StatelessWidget {
       theme: lightTheme,
       darkTheme: darkTheme,
       title: 'Monetine',
-      initialRoute: Routes.monetineNavBar,
+      initialRoute: Routes.login,
     );
   }
 }

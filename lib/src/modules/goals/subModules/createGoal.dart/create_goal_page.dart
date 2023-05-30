@@ -43,6 +43,21 @@ class CreateGoalPage extends GetView<CreateGoalController> {
           ),
         ),
       ),
+      bottomNavigationBar: InkWell(
+        onTap: () {
+          Get.back();
+        },
+        child: Container(
+          color: context.theme.colorScheme.primaryContainer,
+          height: 50,
+          alignment: Alignment.center,
+          child: Text(
+            'Criar novo objetivo',
+            textAlign: TextAlign.center,
+            style: context.textTheme.titleMedium,
+          ),
+        ),
+      ),
     );
   }
 }

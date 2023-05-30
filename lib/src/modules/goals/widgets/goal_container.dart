@@ -1,9 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_utils/get_utils.dart';
+import 'package:monetine/src/core/utils/currency_format.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
 class GoalContainer extends StatelessWidget {
-  const GoalContainer({super.key});
+  final String title;
+  final double value;
+  final double percent;
+  const GoalContainer({
+    super.key,
+    required this.title,
+    required this.value,
+    required this.percent,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +29,7 @@ class GoalContainer extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
-            margin: const EdgeInsets.all(20),
+            margin: const EdgeInsets.all(14),
             height: 100,
             width: 90,
             decoration: BoxDecoration(
@@ -40,12 +49,12 @@ class GoalContainer extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Car',
+                  title,
                   style: context.textTheme.titleLarge,
                 ),
                 const SizedBox(height: 10),
                 Text(
-                  'R\$ 14.000',
+                  toCurrencyFormat(value),
                   style: context.textTheme.titleMedium,
                 ),
                 const SizedBox(height: 5),
@@ -55,8 +64,8 @@ class GoalContainer extends StatelessWidget {
                     animation: true,
                     lineHeight: 20.0,
                     animationDuration: 1200,
-                    percent: 0.8,
-                    center: const Text("80.0%"),
+                    percent: percent,
+                    center: Text('${percent * 100}%'),
                     barRadius: const Radius.circular(10),
                     progressColor: Colors.green,
                   ),

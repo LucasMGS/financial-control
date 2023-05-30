@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:monetine/src/core/constants/routes.dart';
-import 'package:monetine/src/core/enums/transaction_type.dart';
 
 class CardButtonWidget extends StatelessWidget {
   final String text;
